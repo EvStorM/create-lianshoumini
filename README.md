@@ -9,5 +9,6 @@ create lianshoulab miniapp
 ```bash
 npx create-lianshoumini <name>
 yarn create lianshoumini <name>
+pnpx create lianshoumini <name>
 ```
 

@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-
 const { resolve } = require('path');
 const { create } = require('create-create-app');
 
@@ -14,6 +13,7 @@ You can change this in \`src/cli.js\`.
 
 create('create-lianshoumini', {
   templateRoot,
+  promptForTemplate:true,
   extra: {
     architecture: {
       type: 'list',
