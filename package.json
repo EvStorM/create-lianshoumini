@@ -1,7 +1,7 @@
 {
   "name": "create-lianshoumini",
   "description": "create lianshoulab miniapp",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "author": "evstorm <25943752+EvStorM@users.noreply.github.com>",
   "bin": "src/cli.js",
   "files": [
