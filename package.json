@@ -1,0 +1,15 @@
+{
+  "name": "create-lianshoumini",
+  "description": "create lianshoulab miniapp",
+  "version": "1.0.5",
+  "author": "evstorm <25943752+EvStorM@users.noreply.github.com>",
+  "bin": "src/cli.js",
+  "files": [
+    "src",
+    "templates"
+  ],
+  "dependencies": {
+    "create-create-app": "^7.0.0"
+  },
+  "license": "Apache-2.0"
+}

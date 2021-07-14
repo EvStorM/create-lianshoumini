@@ -1,0 +1,5 @@
+<!-- index.wxml -->
+<view class="textpage" hover-class="none" hover-stop-propagation="false">
+  <Navbar>看你直播</Navbar>
+  <view class="" hover-class="none" hover-stop-propagation="false"></view>
+</view>

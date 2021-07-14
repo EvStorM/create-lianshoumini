@@ -1,0 +1,6 @@
+<!-- index.wxml -->
+<view class="container">
+  <view class="e-grid-3 e-grid-g-62">
+    <view class="" wx:for="{{9}}" wx:key="idx" wx:for-index="idx" wx:for-item="item">{{idx}}</view>
+  </view>
+</view>

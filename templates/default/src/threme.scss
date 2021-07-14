@@ -1,0 +1,31 @@
+$e-main-color: #303133;
+$e-content-color: #606266;
+$e-tips-color: #909399;
+$e-light-color: #c0c4cc;
+$e-border-color: #e4e7ed;
+$e-bg-color: #f3f4f6;
+$e-type-primary: #2979ff;
+$e-type-warning: #ff9900;
+$e-type-success: #19be6b;
+$e-type-error: #fa3534;
+$e-type-info: #909399;
+
+$e-type-p-light: lighten($e-type-primary, 10%);
+$e-type-p-dis: lighten($e-type-primary, 30%);
+$e-type-p-dark: darken($e-type-primary, 20%);
+
+$e-type-w-light: lighten($e-type-warning, 10%);
+$e-type-w-dis: lighten($e-type-warning, 30%);
+$e-type-w-dark: darken($e-type-warning, 20%);
+
+$e-type-s-light: lighten($e-type-success, 10%);
+$e-type-s-dis: lighten($e-type-success, 30%);
+$e-type-s-dark: darken($e-type-success, 20%);
+
+$e-type-e-light: lighten($e-type-error, 10%);
+$e-type-e-dis: lighten($e-type-error, 30%);
+$e-type-e-dark: darken($e-type-error, 20%);
+
+$e-type-i-light: lighten($e-type-info, 10%);
+$e-type-i-dis: lighten($e-type-info, 30%);
+$e-type-i-dark: darken($e-type-info, 20%);
