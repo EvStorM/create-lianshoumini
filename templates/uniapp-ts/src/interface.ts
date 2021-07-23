@@ -1,9 +1,9 @@
 /*
  * @Date: 2021-07-23 13:09:39
  * @LastEditors: E'vils
- * @LastEditTime: 2021-07-23 13:26:49
+ * @LastEditTime: 2021-07-23 14:56:57
  * @Description:
- * @FilePath: /templates/uniapp-ts/interface.ts
+ * @FilePath: /src/interface.ts
  */
 
 import { CombinedVueInstance } from 'vue/types/vue';
@@ -31,4 +31,13 @@ export interface Config {
       baseUrl: string;
     };
   };
+}
+
+export interface globalData {
+  displayArea: {};
+  Custom: string;
+  CustomBar: string;
+  StatusBar: string;
+  gloabalImgUrl: string;
+  imgUrl: string;
 }

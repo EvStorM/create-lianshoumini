@@ -2,24 +2,27 @@
 
 <script lang="ts">
   import _config from './config.js';
-  export default {
+  import Vue from 'vue';
+  export default Vue.extend({
+    mpType: 'app',
     globalData: {
       displayArea: {},
       Custom: '',
       CustomBar: '',
       StatusBar: '',
-      gloabalImgUrl: ''
+      gloabalImgUrl: '',
+      imgUrl: ''
     },
-    onLaunch: function () {
-      this.globalData.gloabalImgUrl = _config.server.img.baseUrl;
+    onLaunch() {
+      console.log('App Launch');
     },
-    onShow: function () {
+    onShow() {
       console.log('App Show');
     },
-    onHide: function () {
+    onHide() {
       console.log('App Hide');
     }
-  };
+  });
 </script>
 
 <style lang="scss">

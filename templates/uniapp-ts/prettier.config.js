@@ -17,6 +17,5 @@ module.exports = {
   proseWrap: 'never',
   htmlWhitespaceSensitivity: 'strict',
   endOfLine: 'lf',
-  overrides: [
-  ]
+  overrides: []
 };

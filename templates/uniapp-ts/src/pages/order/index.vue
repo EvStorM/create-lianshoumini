@@ -1,7 +1,13 @@
+<!--
+ * @Date: 2021-07-23 14:40:39
+ * @LastEditors: E'vils
+ * @LastEditTime: 2021-07-23 15:02:14
+ * @Description: 
+ * @FilePath: /src/pages/index/index.vue
+-->
 <template lang="wxml">
   <view>
-    <u-navbar >测试</u-navbar>
-    <u-button type="default" >button</u-button>
+    <e-toast ref="uToast" />
   </view>
 </template>
 

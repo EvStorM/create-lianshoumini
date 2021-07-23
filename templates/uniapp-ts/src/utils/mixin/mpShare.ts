@@ -1,12 +1,12 @@
 /*
  * @Date: 2021-07-23 12:08:21
  * @LastEditors: E'vils
- * @LastEditTime: 2021-07-23 13:26:05
+ * @LastEditTime: 2021-07-23 14:50:11
  * @Description:
- * @FilePath: /templates/uniapp-ts/utils/mixin/mpShare.ts
+ * @FilePath: /src/utils/mixin/mpShare.ts
  */
 
-import { share } from '@/interface';
+import { share } from '../../interface';
 
 /**
 全局分享页面

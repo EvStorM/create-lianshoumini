@@ -1,11 +1,11 @@
 /*
  * @Date: 2021-02-22 14:24:54
  * @LastEditors: E'vils
- * @LastEditTime: 2021-07-23 13:13:30
+ * @LastEditTime: 2021-07-23 14:49:28
  * @Description: 自定义用户的配置文件
- * @FilePath: /templates/uniapp-ts/config.ts
+ * @FilePath: /src/config.ts
  */
-import { Config } from '@/interface';
+import { Config } from './interface';
 
 const config: Config = {
   model: false, // 是否是sass化部署的小程序

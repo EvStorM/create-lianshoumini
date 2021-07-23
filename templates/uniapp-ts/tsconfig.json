@@ -12,11 +12,11 @@
     "sourceMap": true,
     "skipLibCheck": true,
     "baseUrl": ".",
-    "types": ["webpack-env", "@dcloudio/types", "miniprogram-api-typings", "mini-types"],
+    "types": ["webpack-env", "./typings", "@dcloudio/types", "miniprogram-api-typings", "mini-types"],
     "paths": {
       "@/*": ["./src/*"]
     },
     "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
   },
-  "exclude": ["node_modules", "unpackage", "src/**/*.nvue"]
+  "exclude": ["node_modules", "unpackage", "src/app.vue", "src/**/*.nvue"]
 }

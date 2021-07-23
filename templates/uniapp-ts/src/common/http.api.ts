@@ -1,19 +1,16 @@
 /*
  * @Date: 2021-02-02 16:03:32
  * @LastEditors: E'vils
- * @LastEditTime: 2021-07-23 13:15:34
+ * @LastEditTime: 2021-07-23 15:37:55
  * @Description:
- * @FilePath: /templates/uniapp-ts/common/http.api.ts
+ * @FilePath: /src/common/http.api.ts
  */
-
-import { VM } from '@/interface';
-import Vue from 'vue';
 
 /**
  * 简历相关api
  */
 const imgUpload = '/common/upload';
-const install = (Vue: Vue, vm: VM) => {
+const install = (Vue: any, vm: any) => {
   // 创建get方式的api请求
   const createGetApi = (pash: string) => {
     return (params = {}) =>

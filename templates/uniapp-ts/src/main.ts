@@ -1,26 +1,25 @@
 /*
- * @Date: 2021-07-23 12:08:21
+ * @Date: 2021-07-23 14:40:39
  * @LastEditors: E'vils
- * @LastEditTime: 2021-07-23 12:16:44
+ * @LastEditTime: 2021-07-23 15:19:34
  * @Description:
- * @FilePath: /templates/uniapp-ts/main.ts
+ * @FilePath: /src/main.ts
  */
 import Vue from 'vue';
-import App from './App';
-import store from './store/index.js';
+import App from './App.vue';
+import store from './store/index';
 import uView from 'uview-ui';
 Vue.use(uView);
 Vue.config.productionTip = false;
-let mpShare = require('utils/mixin/mpShare.js');
+let mpShare = require('utils/mixin/mpShare');
 Vue.mixin(mpShare);
-App.mpType = 'app';
 const app = new Vue({
   store,
   ...App
 });
-import httpInterceptor from '@/common/http.interceptor.js';
+import httpInterceptor from './common/http.interceptor';
 Vue.use(httpInterceptor, app);
-import httpApi from '@/common/http.api.js';
+import httpApi from './common/http.api';
 Vue.use(httpApi, app);
-app.$mount();
-require('utils/initial.js');
+new App().$mount();
+require('utils/initial');

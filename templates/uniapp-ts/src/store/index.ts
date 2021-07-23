@@ -1,11 +1,11 @@
 /*
  * @Date: 2021-02-02 16:03:32
  * @LastEditors: E'vils
- * @LastEditTime: 2021-07-23 13:34:09
+ * @LastEditTime: 2021-07-23 18:22:37
  * @Description: 公共内容
- * @FilePath: /templates/uniapp-ts/src/store/index.ts
+ * @FilePath: /src/store/index.ts
  */
-import { VM } from '@/interface';
+import { VM } from '../interface';
 import Vue from 'vue';
 import Vuex from 'vuex';
 Vue.use(Vuex);
@@ -13,7 +13,7 @@ const vm: VM = new Vue();
 
 const store = new Vuex.Store({
   state: {
-    token: '',
+    token: 'tokentokentokentoken',
     userInvitaionCode: ''
   },
   // 获取数据

@@ -1,13 +1,6 @@
-/*
- * @Date: 2021-02-02 16:03:32
- * @LastEditors: E'vils
- * @LastEditTime: 2021-07-23 13:15:54
- * @Description:
- * @FilePath: /templates/uniapp-ts/common/http.interceptor.ts
- */
 import CryptoJS from 'crypto-js';
-import _config from '../config.js';
-import { VM } from '@/interface';
+import _config from '../config';
+import { VM } from '../interface';
 const encryptByAES = (string: string, key: string) => {
   let ckey = CryptoJS.enc.Utf8.parse(key);
   let cStr = string + ' ' + _config.appId;
