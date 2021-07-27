@@ -1,0 +1,250 @@
+@mixin r-flex {
+  display: flex;
+}
+// 定义flex布局的flex-content属性
+@each $i, $just in s flex-start, e flex-end, c center, sb space-between, sa space-around {
+  // 定义flex布局的flex-direction属性
+  @each $dir, $long in r row, rr row-reverse, c column, cr column-reverse {
+    .ev-f#{$dir}-#{$i} {
+      @include r-flex;
+      flex-direction: $long;
+      justify-content: $just;
+      align-items: center;
+    }
+  }
+}
+// 定义flex布局的align-items属性
+@each $dir, $long in s flex-start, e flex-end, c center, b baseline, st stretch {
+  .ev-falign-#{$dir} {
+    align-items: $long;
+  }
+}
+// 定义flex布局的 align-self属性
+@each $dir, $long in s flex-start, e flex-end, c center, b baseline, st stretch {
+  .ev-falign-self-#{$dir} {
+    align-self: $long;
+  }
+}
+// 定义flex布局单个元素占比情况
+@for $i from 1 to 10 {
+  .ev-flex-#{$i} {
+    flex: $i;
+  }
+}
+// 定义flex布局是否换行
+.ev-f-wrap {
+  flex-wrap: wrap;
+}
+.ev-f-nowrap {
+  flex-wrap: nowrap;
+}
+.ev-f-wrapr {
+  flex-wrap: wrap-reverse;
+}
+// 定义网格快速布局
+@for $i from 1 to 10 {
+  .ev-grid-#{$i} {
+    display: grid;
+    grid-template-columns: repeat($i, ((1 / $i) * 100%));
+    grid-template-rows: repeat($i, ((1 / $i) * 100%));
+  }
+}
+// 定义行内元素网格快速布局
+@for $i from 1 to 10 {
+  .ev-igrid-#{$i} {
+    display: inline-grid;
+    grid-template-columns: repeat($i, ((1 / $i) * 100%));
+    grid-template-rows: repeat($i, ((1 / $i) * 100%));
+  }
+}
+// 定义网格快速间距布局
+@for $i from 1 to 64 {
+  @if $i % 2 == 0 or $i % 5 == 0 {
+    .ev-grid-g-#{$i} {
+      grid-gap: $i + rpx $i + rpx;
+    }
+  }
+}
+// 定义字体位置
+.ev-text-l {
+  text-align: left;
+}
+.ev-text-c {
+  text-align: center;
+}
+.ev-text-r {
+  text-align: right;
+}
+
+// 定义宽度单位
+@for $i from 10 to 1000 {
+  @if $i % 2 == 0 or $i % 5 == 0 {
+    .ev-w-#{$i} {
+      width: $i + rpx !important;
+    }
+  }
+}
+.ev-w-100vw {
+  width: 100vw;
+}
+.ev-h-100vh {
+  height: 100vh;
+}
+.ev-w-b100 {
+  width: 100%;
+}
+.ev-h-b100 {
+  height: 100%;
+}
+// 定义高度单位
+@for $i from 10 to 1000 {
+  @if $i % 2 == 0 or $i % 5 == 0 {
+    .ev-h-#{$i} {
+      height: $i + rpx !important;
+    }
+  }
+}
+// 定义宽高单位
+@for $i from 10 to 1000 {
+  @if $i % 2 == 0 or $i % 5 == 0 {
+    .ev-wh-#{$i} {
+      width: $i + rpx !important;
+      height: $i + rpx !important;
+    }
+  }
+}
+// 定义透明度单位
+@for $i from 0 to 100 {
+  @if $i % 2 == 0 or $i % 5 == 0 {
+    .ev-tm-#{$i} {
+      opacity: $i/100;
+    }
+  }
+}
+// 定义字体(rpx)单位，
+@for $i from 6 to 64 {
+  .ev-font-#{$i} {
+    font-size: $i + rpx;
+  }
+}
+// 定义字体加粗单位
+@for $i from 0 to 10 {
+  .ev-fbold-#{$i} {
+    font-weight: $i * 100 !important;
+  }
+}
+// 定义描边
+@for $i from 0 to 6 {
+  @each $short, $long in l left, t top, r right, b bottom {
+    .ev-border-#{$short}-#{$i} {
+      border-#{$long}: $i + rpx solid #e4e7ed !important;
+    }
+  }
+}
+@mixin ev-line {
+  overflow: hidden; //超出的文本隐藏
+  white-space: nowrap; //溢出不换行
+  text-overflow: ellipsis; //溢出用省略号显示
+  display: -webkit-box; //作为弹性伸缩盒子模型显示。
+  -webkit-box-orient: vertical; //设置伸缩盒子的子元素排列方式--从上到下垂直排列
+}
+
+@for $i from 1 to 10 {
+  .ev-line-#{$i} {
+    @include ev-line;
+    -webkit-line-clamp: $i; //显示的行
+  }
+}
+
+// 定义内外边距，历遍1-140
+@for $i from 0 through 240 {
+  // 只要双数和能被5除尽的数
+  @if $i % 2 == 0 or $i % 5 == 0 {
+    // 得出：r-m-30
+    .ev-m-#{$i} {
+      margin: $i + rpx !important;
+    }
+
+    // 得出：r-p-30
+    .ev-p-#{$i} {
+      padding: $i + rpx !important;
+    }
+
+    @each $short, $long in l left, t top, r right, b bottom {
+      // 缩写版，结果如： r-m-l-30
+      // 定义外边距
+      .ev-m-#{$short}-#{$i} {
+        margin-#{$long}: $i + rpx !important;
+      }
+      // 定义内边距
+      .ev-p-#{$short}-#{$i} {
+        padding-#{$long}: $i + rpx !important;
+      }
+    }
+    @each $short, $long, $long2 in lr left right, tb top bottom, tl top left, tr top right, bl left bottom, br right bottom {
+      // 缩写版，结果如： r-m-lr-30
+      // 定义外边距
+      .ev-m-#{$short}-#{$i} {
+        margin-#{$long}: $i + rpx !important;
+        margin-#{$long2}: $i + rpx !important;
+      }
+      // 定义内边距
+      .ev-p-#{$short}-#{$i} {
+        padding-#{$long}: $i + rpx !important;
+        padding-#{$long2}: $i + rpx !important;
+      }
+    }
+  }
+}
+.ev-posa {
+  position: absolute;
+}
+.ev-posr {
+  position: relative;
+}
+// 加载中蒙版层
+.ev-loading {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include r-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(192, 196, 204, 0.4);
+}
+// for循环中的顶部横线
+.ev-forb {
+  border-bottom: 1rpx solid #e4e7ed;
+  &:last-child {
+    border-bottom: 0rpx;
+  }
+}
+// 主要内容的安全框
+.ev-mainBody {
+  margin: 20rpx 32rpx 0;
+}
+// 正文内容的安全框(非tab页面)
+.ev-mainBody-b {
+  margin: 20rpx 32rpx 0;
+  padding-bottom: 0;
+  padding-bottom: constant(safe-area-inset-bottom); // 兼容 IOS<11.2
+  padding-bottom: env(safe-area-inset-bottom); // 兼容 IOS>=11.2
+}
+
+.safe-area-inset-bottom {
+  padding-bottom: 0;
+  padding-bottom: constant(safe-area-inset-bottom); // 兼容 IOS<11.2
+  padding-bottom: env(safe-area-inset-bottom); // 兼容 IOS>=11.2
+}
+.ev-lh-0 {
+  line-height: 0;
+}
+.ev-m-l-auto {
+  margin-left: auto;
+}
+.ev-m-r-auto {
+  margin-right: auto;
+}

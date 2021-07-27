@@ -6,6 +6,7 @@
   "scripts": {
     "serve": "npm run dev:mp-weixin",
     "build": "npm run build:mp-weixin",
+    "img": "http-server ./public",
     "watch": "/Applications/wechatwebdevtools.app/Contents/MacOS/cli open --project `pwd`'/dist/dev/mp-weixin/'",
     "build:app-plus": "cross-env NODE_ENV=production UNI_PLATFORM=app-plus vue-cli-service uni-build",
     "build:custom": "cross-env NODE_ENV=production uniapp-cli custom",

@@ -8,7 +8,7 @@
       }
     },
     {
-      "path": "pages/order/index",
+      "path": "pages/mine/index",
       "style": {
         "navigationBarTitleText": "uni-app",
         "navigationStyle": "custom"
@@ -31,7 +31,7 @@
         "text": "首页"
       },
       {
-        "pagePath": "pages/order/index",
+        "pagePath": "pages/mine/index",
         "iconPath": "static/bottomIcon/msg-gray.png",
         "selectedIconPath": "static/bottomIcon/msg.png",
         "text": "订单"
