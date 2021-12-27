@@ -1,0 +1,22 @@
+{
+  "pages": [
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "uni-app",
+        "navigationStyle": "custom"
+      }
+    }
+  ],
+  "easycom": {
+    "^u-(.*)": "@/components/vk-uview-ui/components/u-$1/u-$1.vue",
+    "^e-(.*)": "@/components/Eview/e-$1/e-$1.vue"
+  },
+  "subPackages": [],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uView Vue3.0 横空出世，继承uView1.0意志，再战江湖，风云再起！",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  }
+}
