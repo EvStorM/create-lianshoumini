@@ -280,7 +280,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "../../vk-uview-ui/libs/css/style.components.scss";
+@import "@/uni_modules/vk-uview-ui/libs/css/style.components.scss";
 
 .u-navbar {
   width: 100%;
